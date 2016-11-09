@@ -1,0 +1,244 @@
+html, a {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #000;
+	font-family: Georgia, serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+ }
+ h1 {
+ 	font-size: 2.5rem;
+ 	margin-bottom: 0;
+ }
+.container-fluid {
+	margin: 0;
+	padding: 0;
+}
+
+/*				---SVG + ANIMATION---				*/
+.hero-img {
+	background-color: #AFB5BD;
+	padding: 2rem 0 1rem 0;
+}
+@keyframes draw {
+ /* remove until scrolling animation is written */
+/*	0% {
+		transform: translateX(0px);
+	}*
+	100% {
+		transform: translateX(12px);
+	}
+*/
+}
+#Layer_1 {
+	width: 40%;
+}
+.books {
+	/*	animation: draw 3s 3;
+	-webkit-animation: draw 3s 3;*/
+	 transform: translateX(.75rem); /* keep until scrolling animation is written */
+}
+
+/*				---MENU---				*/
+.menu {
+	padding: 1rem 0;
+	margin-bottom: 1rem;
+}
+.menu-item {
+	box-sizing: border-box;
+	padding: 0 .25rem;
+}
+.menu-item:first-child {
+	padding: 0 .25rem 0 .5rem;
+}
+.menu-item:last-child {
+	padding: 0 .5rem 0 .25rem;
+}
+.menu-item-label {
+	background-color: #AFB5BD;
+	height: 5rem;
+}
+.menu-item-label-active {
+	background-color: #EBFAB4;
+}
+.menu-item-label:hover {
+	background-color: #EBFAB4;
+}
+.menu-item-label p {
+	font-family: "Gotham Narrow", "Freight Sans", Arial, sans;
+	font-size: 1rem;
+	line-height: 1.25rem;
+	margin: .5rem;
+}
+.decoration-thick {
+	background-color: #000;
+	height: 1.5rem;
+}
+.decoration-thin {
+	background-color: #000;
+	height: .5rem;
+}
+
+/*				---BODY TEXT---				*/
+.section {
+	padding: 0 1rem;
+}
+.section-text {
+	margin: 1rem 0 8rem 0;
+}
+.section p {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+
+
+
+
+/*				---MEDIA QUERIES---				*/
+/* extra large */
+@media screen and (min-width: 1600px) and (max-width: 2500px) {
+	#Layer_1 {
+		width: 45%;
+	}
+	.menu-item {
+		padding: 0 .5rem;
+	}
+	.menu-item:first-child {
+		padding: 0 .5rem 0 1rem;
+	}
+	.menu-item:last-child {
+		padding: 0 1rem 0 .5rem;
+	}
+}
+
+/* large  -  desktop */
+/*@media screen and (min-width: 1000px) and (max-width: 1599px) {
+	#Layer_1 {
+		width: 40%;
+	}
+}*/
+
+/* medium */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	#Layer_1 {
+		width: 80%;
+	}
+	.menu {
+		margin-bottom: 1rem;
+	}
+	.menu-item, .menu-item:first-child, .menu-item:last-child  {
+		padding: 0 .5rem 1rem .5rem;
+	}
+	.menu-item-label {
+		height: 6rem;
+	}
+}
+
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	#Layer_1 {
+		width: 80%;
+	}
+	.hero-img {
+		background-color: #EBFAB4;
+		margin: 0;
+		padding: 1rem 0 0 0;
+	}
+	.menu {
+		height: 13rem;
+		padding: .5rem 0 1rem 0;
+	}
+	.menu-item, .menu-item:first-child, .menu-item:last-child {
+		margin: 0;
+		padding: 0 0 1px 0;
+	}
+	.menu-item-label {
+		background-color: #E6DFE6;
+		height: 2rem;
+		padding-bottom: 2rem;
+	}
+	.menu-item-label p {
+		color: #000;
+		font-size: .875rem;
+		line-height: 1rem;
+		text-align: center;
+	}
+	.menu-item-label-active {
+		background-color: #111;
+	}
+	.menu-item-label-active p {
+		color: #fff;
+		font-weight: bolder;
+	}
+	.decoration-thick, .decoration-thin {
+		display: none;
+	}
+	h1 {
+		font-size: 1.5rem;
+		margin: 1rem 0 0 0;
+	}
+	.section .decoration-thin {
+		display: block;
+		height: .25rem;
+	}
+	.section p {
+		font-size: .875rem;
+		line-height: 1.25rem;
+	}
+}
+
+/* extra small */
+@media screen and (max-width: 319px) {
+	#Layer_1 {
+		width: 85%;
+	}
+	.hero-img {
+		margin: 0;
+	}
+	.menu {
+		height: 13rem;
+		margin-bottom: 1rem;
+	}
+	.menu-item, .menu-item:first-child, .menu-item:last-child  {
+		background-color: #AFB5BD;
+		margin: 0;
+		padding: 0;
+	}
+	.menu-item-label {
+		background-color: #111;
+		height: 1.5rem;
+		padding-bottom: 2rem;
+	}
+	.menu-item-label-active {
+		background-color: #AFB5BD;
+	}
+	.menu-item-label p {
+		color: #fff;
+		font-size: 1rem;
+		line-height: 1rem;
+		text-align: center;
+	}
+	.decoration-thick, .decoration-thin {
+		display: none;
+	}
+	h1 {
+		font-size: 2.25rem;
+		margin: 1rem 0 0 0;
+	}
+	.section .decoration-thin {
+		display: block;
+	}
+	.section p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+}
+}
